@@ -25,6 +25,7 @@ export const create: AppRouteHandler<CreateRoute> = async (c) => {
 
 export const getOne: AppRouteHandler<GetOneRoute> = async (c) => {
   const { id } = c.req.valid("param");
+  // const { color, size } = c.req.valid("query");  // Access query params
   const product = await prisma.product.findUnique({
     where: {
       id,

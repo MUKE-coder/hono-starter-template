@@ -11,8 +11,6 @@ const EnvSchema = z.object({
   PORT: z.coerce.number().default(8000),
   LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace"]),
   DATABASE_URL: z.string(),
-  RESEND_API_KEY: z.string(),
-  JWT_SECRET: z.string(),
   FRONTEND_URL: z.string().default("http://localhost:3000"),
 });
 

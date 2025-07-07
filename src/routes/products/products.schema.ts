@@ -26,7 +26,10 @@ export const IdParamSchema = z.object({
       example: "00b4766213f0732810a29d8a",
     }),
 });
-
+export const ProductQuerySchema = z.object({
+  color: z.string().optional(),
+  size: z.string().optional(),
+});
 // user parameter schema for filtering by user
 export const UserIdParamSchema = z.object({
   userId: z

@@ -5,7 +5,7 @@ import { createErrorSchema } from "stoker/openapi/schemas";
 
 import { DeleteResponseSchema, NotFoundSchema } from "@/lib/constants";
 
-import { CreateProductSchema, IdParamSchema, ProductSchema, UpdateProductSchema, UserIdParamSchema } from "./products.schema";
+import { CreateProductSchema, IdParamSchema, ProductQuerySchema, ProductSchema, UpdateProductSchema, UserIdParamSchema } from "./products.schema";
 
 const tags = ["Products"];
 export const list = createRoute({
@@ -47,6 +47,7 @@ export const getOne = createRoute({
   method: "get",
   request: {
     params: IdParamSchema,
+    query: ProductQuerySchema,
   },
   tags,
   responses: {
